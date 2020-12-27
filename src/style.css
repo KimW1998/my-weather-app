@@ -1,0 +1,45 @@
+body {
+  margin: 20px;
+  padding: 0 auto;
+  background-color: rgb(0, 0, 0);
+  background-image: url(https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2066&q=80);
+  background-size: 1500px;
+  background-position: center;
+}
+
+.container {
+  padding: 50px 80px;
+  border: 1px solid black;
+  max-width: 1140px;
+  margin: 40px auto;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 23, 0.7);
+  display: block;
+  font-family: "Inconsolata", monospace;
+  color: white;
+}
+.sun {
+  display: block;
+  margin: 0 auto;
+  width: 180px;
+}
+
+h1 {
+  text-align: center;
+  font-size: x-large;
+}
+ul {
+  list-style: none;
+}
+.today-temp {
+  text-align: center;
+  font-size: x-large;
+}
+.feels-like {
+  font-size: larger;
+}
+.days {
+  text-align: center;
+  font-size: larger;
+  border: 1px solid white;
+}
