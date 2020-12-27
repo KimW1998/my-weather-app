@@ -43,3 +43,8 @@ ul {
   font-size: larger;
   border: 1px solid white;
 }
+
+footer {
+  text-align: center;
+  color: white;
+}
