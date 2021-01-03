@@ -26,11 +26,11 @@
           <p><a href="" id="celsius"> °C</a><a href="" id="fahrenheit"> °F</a></p>
       </div>
       </div>  
-      <div class="row">
-        <div class="col-4">
           <form 
           class="search-form" 
           id="search-form">
+          <div class="row">
+          <div class="col-6">
             <input 
             id="city-input" 
             type="search" 
@@ -58,16 +58,12 @@
           </div>
         </div>
        <div class="row">
-           <div class="col">
+           <div class="col-6">
              <img class="sun"
              src="pictures/weather.svg" alt="sun">
-             <br />
-               <p> <span class="today-temp" id="current-temperature"></span>°C</p>
-                <br />
-              <p id="description"></p>
-              <br />
+            
            </div>
-           <div class="col" class="feels-like">
+           <div class="col-6" class="feels-like">
              <ul>
               <li>☺︎ Feels like: <span id="feels-like"></span>°C</li>
               <li>☀︎ High: <span id="high"></span>°C</li>
@@ -77,6 +73,17 @@
            </ul>
           </div>
        </div> 
+       <div class="row">
+         <div class="col-12">
+          <p class="temperature-now"> <span class="today-temp" id="current-temperature"></span>°C</p>
+         </div>
+       </div>
+      <div class="row">
+        <div class="col-12">
+          <p class="conditions" id="description"></p>
+          <br />
+        </div>
+      </div>
     <div class="row">
         <div class="col" class="days">
             <p>Monday</p>

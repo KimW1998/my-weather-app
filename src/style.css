@@ -28,16 +28,32 @@ h1 {
   text-align: center;
   font-size: x-large;
 }
+
 ul {
   list-style: none;
 }
+
+.temperature-now {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .today-temp {
+  font-size: x-large;
+}
+
+.conditions {
+  display: block;
+  margin: 0 auto;
   text-align: center;
   font-size: x-large;
 }
+
 .feels-like {
   font-size: larger;
 }
+
 .days {
   text-align: center;
   font-size: larger;
