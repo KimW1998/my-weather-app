@@ -146,7 +146,7 @@ function dispalyForecast(response) {
     forecast = response.data.list[index];
     
   forecastElement.innerHTML += `
-    <div class="col-2" class="days">
+    <div class="col-2" class="hours">
             <p>
             ${formatHours(forecast.dt * 1000)}
             </p>
