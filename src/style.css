@@ -19,12 +19,12 @@ body {
   color: white;
 }
 
-.active {
+.weather-app .active {
   color: white;
   cursor: default;
 }
 
-.active:hover {
+.weather-app .active:hover {
   text-decoration: none;
 }
 
