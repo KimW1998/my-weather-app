@@ -1,54 +1,3 @@
-// Pop-up
-//let weather = {
-//"paris": {
-//temp: 19.7,
-//humidity: 80
-//},
-//"tokyo": {
-//temp: 17.3,
-//humidity: 50
-//},
-//"lisbon": {
-//temp: 30.2,
-//humidity: 20
-//},
-//"san francisco": {
-//temp: 20.9,
-//humidity: 100
-//},
-//"moscow": {
-//temp: -5,
-//humidity: 20
-//}
-//};
-
-//let city = prompt("Enter a City");
-// city = city.toLowerCase();
-//if (weather[city] !== undefined) {
-      //let temperature = weather[city].temp; 
-      //let tempfahrenheit = ((temperature*9/5) + 32);
-      //let humidity = weather[city].humidity;
-
-//alert(`It is currently ${temperature}°C (${tempfahrenheit}°F) degrees in ${city} with a humidity of ${humidity}%`);
-//} else {
-// alert(`Sorry, we don't know the weather for this city, try going to
-//  https://www.google.com/search?q=weather+ ${city}`);
-//}
-
-
-// Search result
-//function searchCity(event) {
-  //event.preventDefault();
-  //let cityInput = document.querySelector("#city-input");
-
-  //let h1 = document.querySelector("h1");
-  //h1.innerHTML = cityInput.value;
-//}
-
-//let searchForm = document.querySelector("form");
-//searchForm.addEventListener("submit", searchCity);
-
-
 // Current date
 let now = new Date();
 
@@ -89,10 +38,7 @@ document.getElementById(
   "current"
 ).innerHTML = `${day} ${date} ${month} ${hours}:${minutes}`;
 
-// Celsius to Fahrenheit
-
-
-//Week 5 Homework
+//hour and minutes format
 function formatHours(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -107,6 +53,7 @@ function formatHours(timestamp) {
   return `${hours}:${minutes}`;
 }
 
+//add weather conditions
 function displayWeatherCondition(response) {
 document.querySelector("#city").innerHTML = response.data.name;
 document.querySelector("#current-temperature").innerHTML = Math.round(response.data.main.temp);
@@ -137,6 +84,7 @@ document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   iconElement.setAttribute("alt", response.data.weather[0].description);  
 }
 
+//add weather forecast
 function dispalyForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
@@ -166,6 +114,7 @@ function dispalyForecast(response) {
    }
   }
 
+  //search city
 function searchCity(city) {
   let apiKey = "2613244abb4a0a70a1aa2acdd9be4366";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -181,6 +130,7 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+//search current location
 function searchLocation(position) {
   let apiKey = "2613244abb4a0a70a1aa2acdd9be4366";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -192,6 +142,7 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+// Celsius to Fahrenheit
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temperature");
@@ -212,16 +163,20 @@ function displayCelsiusTemperature(event) {
 
 let celsiusTemperature = null;
 
+//search city
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
+//search current location
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
+// Celsius to Fahrenheit
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
+//When page is first loaded it shows the weather from London
 searchCity("London");
