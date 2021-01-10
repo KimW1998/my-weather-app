@@ -18,6 +18,16 @@ body {
   font-family: "Inconsolata", monospace;
   color: white;
 }
+
+.active {
+  color: white;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+}
+
 .sun {
   display: block;
   margin: 0 auto;
