@@ -105,8 +105,8 @@ function dispalyForecast(response) {
         <div class="weather-forecast-tempterature">
           <p>
               <strong>
-              ${Math.round(forecast.main.temp_max)}°
-              </strong> ${Math.round(forecast.main.temp_min)}°
+              ${Math.round(forecast.main.temp_max)}°C
+              </strong> ${Math.round(forecast.main.temp_min)}°C
           </p>
         </div>
         </div>
