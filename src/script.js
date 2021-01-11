@@ -36,7 +36,7 @@ let month = months[now.getMonth()];
 
 document.getElementById(
   "current"
-).innerHTML = `${day} ${date} ${month} ${hours}:${minutes}`;
+).innerHTML = `${day} ${date} ${month} ${formatHours(now)}`;
 
 //hour and minutes format
 function formatHours(timestamp) {
